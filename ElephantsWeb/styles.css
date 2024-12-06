@@ -28,8 +28,8 @@ p, h1, .quote {
 }
 .navbar-link {
     text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    color: black;ti
+    font-family: Arial, Helveca, sans-serif;
     font-size: larger;
 }
 .cover {
@@ -42,7 +42,7 @@ p, h1, .quote {
 .cover-logo-container {
     position: absolute;
     top: 10%;
-    left: 25%;
+    left: 28.5%;
     width: 40%;
     aspect-ratio: 1 / 1;
     padding: 2em;
