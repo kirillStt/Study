@@ -5,7 +5,37 @@
 <title>Создание и использование массивов</title>
 <link href="_css/site.css" rel="stylesheet">
 <script>
+          const movies = [
+              "Фильм 1: В поисках Немо",
+              "Фильм 2: Звёздные войны",
+              "Фильм 3: Форрест Гамп",
+              "Фильм 4: Матрица",
+              "Фильм 5: Начало",
+              "Фильм 6: Титаник",
+              "Фильм 7: Гладиатор",
+              "Фильм 8: Интерстеллар",
+              "Фильм 9: Пираты Карибского моря",
+              "Фильм 10: Властелин колец"
+          ];
 
+          function displayMovies() {
+              const output = document.getElementById("movie-output");
+
+              const firstMovie = movies[0];
+              const fifthMovie = movies[4];
+              const lastMovie = movies[movies.length - 1];
+
+              const result = `
+                  <h2>Список фильмов</h2>
+                  <p>Первый фильм: ${firstMovie}</p>
+                  <p>Пятый фильм: ${fifthMovie}</p>
+                  <p>Последний фильм: ${lastMovie}</p>
+              `;
+
+              output.innerHTML = result;
+          }
+
+          window.onload = displayMovies;
 </script>
 </head>
 <body>
@@ -21,6 +51,7 @@
 	  </script>
      </div>
   </div>
+  <div id="movie-output"></div>
   <footer>
     <p>JavaScript - Lesson 1.6</p>
   </footer>
