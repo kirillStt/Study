@@ -1,0 +1,295 @@
+body {
+   margin: 0; 
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1,h2,p,a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.navbar>.links {
+    border-bottom: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height: 3em;
+}
+.navbar>.links > a{
+    color: black;
+    position: relative;
+}
+.navbar > .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar>.title>*>p,
+.navbar>.title>*>h1 {
+    text-align: center;
+    color: black;
+}
+.navbar > .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: #cf2f24;
+    height: 5em;
+}
+.navbar > .products > a {
+    color: white;
+    font-size: larger;
+    position: relative;
+}
+.products > #weirdCircle {
+    background-color: #cf2f24;
+    width: 15%;
+    height: 7%;
+    position: absolute;
+    z-index: -11;
+    margin-top: 2em;
+    border-radius: 100%;
+}
+.navbar > .products > a:hover .dropdown{
+    visibility: visible;
+}
+.navbar > .products > a  .dropdown {
+    position: absolute;
+    background-color: #b3271d;
+    padding: 1em;
+    margin-left: -0.8em;
+    margin-top: 0.5em;
+    z-index: 9;
+    border-radius: 0.2em;
+    box-shadow: black 0px 0px 10px;
+    visibility: hidden;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #2d2e3a;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    gap: 2em;
+    min-height: 10em;
+}
+.footer > div:nth-child(2) {
+    width: 720px;
+    max-width: 50%;
+}
+.footer > .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 20%;
+}
+.footer>.contact>p{
+    margin: 0;
+}
+.footer>.contact>*:nth-child(1){
+    font-size:1.5em;
+}
+.footer >.links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    gap: 1em;
+    
+}
+.footer>.contact>p,
+.footer>.links > a {
+    font-size: 1.25em;
+    color: white;
+}
+.footer>.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+.footer > .social > svg  {
+    padding: 0.5em;
+    border-radius: 100%;
+    border: 1px dashed black;
+    min-width: 2em;
+    min-height: 2em;
+    filter: invert(100%);
+}
+.footer>.social>svg>path {
+    width:100%;
+}
+.content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filters>.criteria {
+    display: flex;
+    gap: 1em;
+}
+.filters>.criteria>p {
+    background-color: rgb(212, 212, 212);
+    padding: 0.75em;
+    border-radius: .25em;
+}
+.filters>.sort{ 
+    width: 20%;
+}
+.filters>.sort >p{
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid rgb(212, 212, 212);
+}
+.products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.product {
+    max-width: 10em;
+    border: 1px solid #cf2f24;
+    padding: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.product > img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+.product>.hit{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: #5db85d;
+    color: white;
+    padding: 0.2em;
+}
+.product>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product>div>div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5em;
+}
+.buyButton {
+    background-color: #cf2f24;
+    color: white;
+}
+/*                */
+/* Страница входа */
+/*                */ 
+.login {
+    width: 100%;
+    border: #cf2f24 1px solid;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.login>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.login>div>*:nth-child(1) {
+    width: 40%;
+    text-align: right;
+}
+.login>div>*:nth-child(2) {
+    width: 40%;
+    text-align: left;
+}
+.login>div:has(.loginButton) {
+    display: flex;
+    justify-content: start;
+}
+.loginButton {
+    background-color: #2d2e3a;
+    color: white;
+    width: min-content !important;
+    padding: 1em;
+}
+.loginLink {
+    text-decoration: underline;
+}
+/*                  */
+/*  Страница товара */
+/*                  */
+.oneProduct {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.productInfo {
+    display: flex;
+    flex-direction: column;
+}
+.price {
+    color: #cf2f24;
+    font-size: 2em;
+}
+.picker {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+.picker > .count {
+    background-color: #2d2e3a20;
+    border-radius: 0.5em;
+    width: 10em;
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+}
+.picker > .count > div {
+    width: 3em;
+    border-radius: 0.3em;
+    background-color: #555555;
+}
+.buyButton {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.order {
+    color: #555555;
+    border-bottom: dashed 1px #555555;
+    width: fit-content;
+}
+.reviewLine {
+    width: 100%;
+    border-top: 1px solid #cf2f24;
+}
+.writeReview {
+    padding: 1em;
+    color: #555555;
+    border-radius: 0.2em;
+    border: 2px solid #555555;
+    width: fit-content;
+}
