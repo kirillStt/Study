@@ -5,10 +5,24 @@
 <title>Использование функций</title>
 <link href="../_css/site.css" rel="stylesheet">
 <script>
-  function excludingVatPrice(price) {
-  if (price == null) return -1;
-  return +(price/1.15).toFixed(2);
-}
+<!--  function withoutNDS(price) {-->
+<!--  if (price == null) return -1;-->
+<!--  return +(price/1.15).toFixed(2);-->
+<!--}-->
+
+        function withoutNDS() {
+            const totalAmount = parseFloat(document.getElementById('totalAmount').value);
+
+            if (isNaN(totalAmount) || totalAmount < 0) {
+                alert("Пожалуйста, введите корректную сумму.");
+                return;
+            }
+
+            const ndsRate = 0.18;
+            const amountWithoutNDS = totalAmount / (1 + ndsRate);
+
+            document.getElementById('result').innerText = `Сумма без НДС: ${amountWithoutNDS.toFixed(2)} руб.`;
+        }
 </script>
 </head>
 
@@ -20,7 +34,12 @@
   <div class="content">
     <div class="main">
       <h1>Использование функций (НДС)</h1>
-      <p>Сумма без ндс: <strong> </strong></p>
+
+      <label for="totalAmount">Введите сумму за товар с НДС:</label>
+      <input type="number" id="totalAmount" placeholder="Сумма с НДС" required>
+      <button onclick="withoutNDS()">Рассчитать сумму без НДС</button>
+
+      <h2 id="result"></h2>
     </div>
   </div>
   <footer>
