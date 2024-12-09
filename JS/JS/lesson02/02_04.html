@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Простая викторина</title>
-<link href="../_css/site.css" rel="stylesheet">
-<script>
-
-</script>
+<link href="style.css" rel="stylesheet">
+<script src="script.js></script>
 </head>
 
 <body>
@@ -17,7 +15,12 @@
   <div class="content">
     <div class="main">
       <h1>Викторина</h1>
-      <script src="script.js"></script>
+      <div id="quiz-container">
+        <h2 id="question"></h2>
+        <input type="text" id="answer" placeholder="Ваш ответ" required>
+        <button id="submit">Ответить</button>
+        <h3 id="result"></h3>
+      </div>
       </div>
   </div>
   <footer>

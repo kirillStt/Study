@@ -208,6 +208,13 @@ h1,h2,p,a {
     display: flex;
     flex-direction: column;
 }
+
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
 .login>div {
     display: flex;
     align-items: center;
